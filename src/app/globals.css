@@ -1,0 +1,103 @@
+.navv{
+    width: 180px;
+}
+li{
+    list-style: none;
+}
+
+.bar{
+    position: relative;
+}
+.nb{
+    position: absolute;
+    top: 0px;
+    background-color: rgba(22, 66, 156, 0.452);
+}
+.i{
+    object-fit: cover;
+    position: absolute;
+    bottom: 220px;
+    left: 220px;
+    color: white;
+}
+.btn{
+background-color: rgba(255, 255, 255, 0);
+border: 1px solid white;
+border-radius: 0px;
+color: white;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+
+}
+.btn1:hover{
+    background-color: black;
+    color:white;
+
+}
+.hi{
+    height: 500px;
+ filter: brightness(40%);
+   
+}
+
+.pos{
+position: absolute;
+bottom: 20px;
+margin-left: 50px;
+color: white;
+}
+.bgcol{
+    background-color: #E7F6FF;
+}
+.line{
+    border-bottom: 2px solid blue;
+    width: 90px;
+    margin: 0 auto;
+}
+.im2{
+    width: 260px;
+}
+/* .para3{
+    position: absolute;
+    bottom: 120px;
+    margin-left: 80px;
+    color: white;
+
+    
+} */
+
+.im4{
+    height: 500px;
+    object-fit: cover;
+    position: sticky;
+}
+.marg{
+    margin: 0 80px;
+}
+
+.a{
+     position: fixed;
+  width: 500px;
+
+}
+.parallax1 {
+  height: 100vh;
+  background-image: url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg");
+  background-attachment: fixed;
+}
+.parallax {
+  height: 100vh;
+  background-image: url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.content {
+  padding: 30px;
+}
+

@@ -1,0 +1,14 @@
+"use client"
+import Link from 'next/link'
+import React from 'react'
+
+function Header() {
+  return (
+    <>
+      <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+    </>
+  )
+}
+
+export default Header
