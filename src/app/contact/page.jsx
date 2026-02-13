@@ -45,7 +45,7 @@ function page() {
 
             <section className='bg-light'>
                 <div className='container '>
-                    <div className='text-center py-5'>
+                    <div className='text-center py-4'>
                         <h2>Have any queries? </h2>
                         <h5 className='display-6 fw-bold'>We're here to help.​ </h5>
                         <div className='line mt-3'></div>
@@ -83,31 +83,78 @@ function page() {
                         </div>
                     </div>
                     <div className='row'>
-                        <div className='col-lg-6'>
-                            <span>Don't be a stranger!</span>
+                        <div className='col-lg-6  d-flex flex-column justify-content-center'>
+                            <span className='fw-bold'>Don't be a stranger!</span>
                             <h1>You tell us. We listen. </h1>
                             <p>Cras elementum finibus lacus nec lacinia. Quisque non convallis nisl, eu condimentum sem. Proin dignissim libero lacus, ut eleifend magna vehicula et. Nam mattis est sed tellus. </p>
                         </div>
 
                         <div className='col-lg-6'>
                             <div class="mb-3">
-  <div className='card p-5 border-0 rounded shadow-sm'>
-    <label htmlFor="exampleFormControlInput1" className="form-label"></label>
-  <input type="text" className="form-control space-y-4" id="exampleFormControlInput1" placeholder="Name*" />
-  <label htmlFor="exampleFormControlInput1" className="form-label"></label>
-  <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Subject*" />
-  <label htmlFor="exampleFormControlInput1" className="form-label"></label>
-  <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email*" />
-  <div className="mb-3">
-    <label htmlFor="exampleFormControlTextarea1" className="form-label"></label>
-    <textarea className="form-control" id="exampleFormControlTextarea1" rows={5} defaultValue={""} placeholder="MESSAGE*" />
-  </div></div>
-
-</div>
+                                <div className='card p-5 border-0 rounded shadow-sm'>
+                                    <label htmlFor="exampleFormControlInput1" className="form-label pt-4"></label>
+                                    <input type="text" className="form-control g-3" id="exampleFormControlInput1" placeholder="Name*" />
+                                    <label htmlFor="exampleFormControlInput1" className="form-label pt-4"></label>
+                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Subject*" />
+                                    <label htmlFor="exampleFormControlInput1" className="form-label pt-4"></label>
+                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email*" />
+                                    <div className="mb-3">
+                                        <label htmlFor="exampleFormControlTextarea1" className="form-label pt-4"></label>
+                                        <textarea className="form-control" id="exampleFormControlTextarea1" rows={5} defaultValue={""} placeholder="MESSAGE*" />
+                                        <div className='pt-5'>
+                                            <button className='btn btn-primary p-2 '>SEND MESSAGE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                     <section className="py-5 mt-5">
+    <div className="container ">
+      <div className="row ">
+        <div className="col-lg-3 ">
+          <h3 className="pb-3">Quick Links </h3>
+          <p>Home</p>
+          <p>About</p>
+          <p>My Account</p>
+          <p>Cart </p>
+          <p>Contact </p>
+        </div>
+        <div className="col-lg-3">
+          <h3 className="pb-3">Quick Links </h3>
+          <p>Home</p>
+          <p>About</p>
+          <p>My Account</p>
+          <p>Cart </p>
+          <p>Contact </p>
+        </div>
+        <div className="col-lg-3">
+          <h3 className="pb-3">Quick Links </h3>
+          <p>Home</p>
+          <p>About</p>
+          <p>My Account</p>
+          <p>Cart </p>
+          <p>Contact </p>
+        </div>
+        <div className="col-lg-3">
+          <h3 className="pb-3">Quick Links </h3>
+          <img className="w-50" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/playstore-free-img.png" alt />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div className="border " />
+  <section className="pt-3">
+    <div className="container">
+      <div className="d-flex justify-content-between">
+        <p>Copyright © 2026 Brandstore</p>
+        <div>
+          <p>Powered by Brandstore </p>
+        </div>
+      </div>
+    </div>
+  </section>
                 </div>
-
             </section>
         </>
     )

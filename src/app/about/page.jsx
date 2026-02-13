@@ -69,39 +69,39 @@ function Page() {
               Class
               <br /> aptent taciti sociosqu ad litora torquent per conubia nostra </p>
           </div>
-        <div className='ww'>
+        <div className='ww py-4'>
             <div className='row justify-content-center gap-3 text-center '>
           <div className='col-lg-3 clr p-4 rounded '>
             <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3>Harvey Spector</h3>
+           <h3 className='pt-3'>Harvey Spector</h3>
            <p>Founder - CEO</p>
           </div>
           <div className='col-lg-3 clr p-4 rounded '>
-            <img className=' w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3>Harvey Spector</h3>
+            <img className=' w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team1-free-img.png" alt="" />
+           <h3 className='pt-3'>Jessica Pearson</h3>
            <p>Founder - CEO</p>
           </div>
           <div className='col-lg-3 clr p-4 rounded'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3>Harvey Spector</h3>
+            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team3-free-img.png" alt="" />
+           <h3 className='pt-3'>Rachel Zain</h3>
            <p>Founder - CEO</p>
           </div>
 
           </div>
           <div className='row justify-content-center gap-3 text-center py-2'>
           <div className='col-lg-3 clr p-4'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3>Harvey Spector</h3>
+            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team4free-img.png" alt="" />
+           <h3 className='pt-3'>Luise Litt</h3>
            <p>Founder - CEO</p>
           </div>
           <div className='col-lg-3 clr p-4'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3>Harvey Spector</h3>
+            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team5-free-img.png" alt="" />
+           <h3 className='pt-3'>Katrina Bennett</h3>
            <p>Founder - CEO</p>
           </div>
           <div className='col-lg-3 clr p-4'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3>Harvey Spector</h3>
+            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team6-free-img.png" alt="" />
+           <h3 className='pt-3'>Mike Ross</h3>
            <p>Founder - CEO</p>
           </div>
 
@@ -132,28 +132,28 @@ function Page() {
     <div className="container">
       <div className="row marg">
         <div className="col-lg-3 ">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <div className="text-center">
+            <h4>Worldwide Shipping </h4>
+            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+          </div>
+        </div>
+        <div className="col-lg-3 ">
+          <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>
             <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
           </div>
         </div>
         <div className="col-lg-3">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>
             <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
           </div>
         </div>
         <div className="col-lg-3">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
-          <div className="text-center">
-            <h4>Worldwide Shipping </h4>
-            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>
             <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>

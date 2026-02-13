@@ -151,6 +151,10 @@ background-image:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.648)), ur
     margin-top: 90px;
 }
 
+.imz{
+    width: 15%;
+}
+
 /* contact page */
 
 .parallax4{
@@ -162,5 +166,4 @@ url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 

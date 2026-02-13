@@ -117,49 +117,49 @@ function page() {
           <p>Men <br /> $150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe1-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br /> $150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans1-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br />$150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans2-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br /> $150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans4-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br />$150.00</p>
         </div>
       </div>
       <div className="row justify-content-between">
         <div className="col-lg-2  im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-w-jeans1-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br /> $150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe1-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory2-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br /> $150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-accessory1-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br />$150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag1-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br /> $150.00</p>
         </div>
         <div className="col-lg-2 im2">
-          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-768x768.jpg" alt />
+          <img className="w-100" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-bag3-768x768.jpg" alt />
           <h4>DNK Yellow Shoes</h4>
           <p>Men <br />$150.00</p>
         </div>
@@ -179,32 +179,32 @@ function page() {
       </div>
     </div>
   </section>
-  <section className="py-5 bgcol">
+  <section className="py-5 ">
     <div className="container">
       <div className="row marg">
         <div className="col-lg-3 ">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <div className="text-center">
+            <h4>Worldwide Shipping </h4>
+            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+          </div>
+        </div>
+        <div className="col-lg-3 ">
+          <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>
             <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
           </div>
         </div>
         <div className="col-lg-3">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>
             <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
           </div>
         </div>
         <div className="col-lg-3">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
-          <div className="text-center">
-            <h4>Worldwide Shipping </h4>
-            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+          <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>
             <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
