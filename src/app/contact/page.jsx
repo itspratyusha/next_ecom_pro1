@@ -1,0 +1,116 @@
+import Link from 'next/link'
+import React from 'react'
+
+function page() {
+    return (
+        <>
+            <section className="parallax4">
+                <nav className="navbar navbar-expand-lg navbar-dark p-4 nb container-fluid">
+                    <div className="container-fluid ">
+                        <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt />
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon" />
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page" href="#">EVERYTHING</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">WOMEN</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">MEN</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#">ACCESSORIES</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="d-flex gap-4 text-white">
+                            <Link className='text-decoration-none text-white' href="/">Home</Link>
+                            <Link className='text-decoration-none text-white' href="/about">About</Link>
+                            <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
+                            <li>$0.00 </li>
+                            <li>icon</li>
+                            <li>icon</li>
+                        </div>
+                    </div>
+                </nav>
+                <div className="i2 space-y-3">
+                    <h1 className="display-3 fw-semibold">Contact us</h1>
+                </div>
+
+            </section>
+
+            <section className='bg-light'>
+                <div className='container '>
+                    <div className='text-center py-5'>
+                        <h2>Have any queries? </h2>
+                        <h5 className='display-6 fw-bold'>We're here to help.​ </h5>
+                        <div className='line mt-3'></div>
+
+                        <div className='row justify-content-center g-4 py-4'>
+                            <div className='col-lg-3'>
+                                <div className='card bg-white p-4 rounded shadow border-0'>
+                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
+                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                </div>
+                            </div>
+
+                            <div className='col-lg-3'>
+                                <div className='card bg-white p-4 rounded shadow border-0'>
+                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
+                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                </div>
+                            </div>
+                            <div className='col-lg-3'>
+                                <div className='card bg-white p-4 rounded shadow border-0'>
+                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
+                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                </div>
+                            </div>
+                            <div className='col-lg-3 '>
+                                <div className='card bg-white p-4 rounded shadow border-0'>
+                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
+                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='col-lg-6'>
+                            <span>Don't be a stranger!</span>
+                            <h1>You tell us. We listen. </h1>
+                            <p>Cras elementum finibus lacus nec lacinia. Quisque non convallis nisl, eu condimentum sem. Proin dignissim libero lacus, ut eleifend magna vehicula et. Nam mattis est sed tellus. </p>
+                        </div>
+
+                        <div className='col-lg-6'>
+                            <div class="mb-3">
+  <div className='card p-5 border-0 rounded shadow-sm'>
+    <label htmlFor="exampleFormControlInput1" className="form-label"></label>
+  <input type="text" className="form-control space-y-4" id="exampleFormControlInput1" placeholder="Name*" />
+  <label htmlFor="exampleFormControlInput1" className="form-label"></label>
+  <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Subject*" />
+  <label htmlFor="exampleFormControlInput1" className="form-label"></label>
+  <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Email*" />
+  <div className="mb-3">
+    <label htmlFor="exampleFormControlTextarea1" className="form-label"></label>
+    <textarea className="form-control" id="exampleFormControlTextarea1" rows={5} defaultValue={""} placeholder="MESSAGE*" />
+  </div></div>
+
+</div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </>
+    )
+}
+
+export default page

@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -35,11 +36,13 @@ function page() {
           </ul>
         </div>
         <div className="d-flex gap-4 text-white">
-          <a href="/about">About </a>
-          <li>Contact Us </li>
-          <li>$0.00 </li>
-          <li>icon</li>
-          <li>icon</li>
+           <Link className='text-decoration-none text-white' href="/">Home</Link>
+            <Link className='text-decoration-none text-white' href="/about">About</Link>
+            <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
+
+          <span>$0.00 </span>
+          <span>icon</span>
+          <span>icon</span>
         </div>
       </div>
     </nav>
@@ -170,6 +173,7 @@ function page() {
         <h2 className="display-5 fw-bold">Special Edition </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec <br />
           ullamcorper mattis, pulvinar dapibus leo. </p>
+         
         <h4 className="pb-3">Buy This T-shirt At 20% Discount, Use Code OFF20 </h4>
         <button className="p-3 border-0 btn1 fw-bold w-25">Shop now</button>
       </div>
@@ -178,7 +182,7 @@ function page() {
   <section className="py-5 bgcol">
     <div className="container">
       <div className="row marg">
-        <div className="col-lg-3">
+        <div className="col-lg-3 ">
           <img className="w-25 pb-3 d-block mx-auto" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
           <div className="text-center">
             <h4>Worldwide Shipping </h4>

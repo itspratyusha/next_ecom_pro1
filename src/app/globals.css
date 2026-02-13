@@ -52,7 +52,7 @@ color: white;
     background-color: #E7F6FF;
 }
 .line{
-    border-bottom: 2px solid blue;
+    border-bottom: 4px solid blue;
     width: 90px;
     margin: 0 auto;
 }
@@ -84,12 +84,12 @@ color: white;
 }
 .parallax1 {
   height: 100vh;
-  background-image: url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg");
+  background-image: linear-gradient(rgba(42, 140, 193, 0.322), rgba(12, 77, 156, 0.327)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg");
   background-attachment: fixed;
 }
 .parallax {
   height: 100vh;
-  background-image: url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.648)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -100,4 +100,67 @@ color: white;
 .content {
   padding: 30px;
 }
+/* about page  */
+.parallax2{
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.574), rgba(0, 0, 0, 0.648)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/05/banner-04.jpg");
+  background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+.i2{
+    
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    color: white;
+}
+.clr{
+    background: #F5F7F9;
+}
+.clr1{
+    background: white;
+}
+.line1{
+    border-bottom: 4px solid blue;
+    width: 100px; 
+}
+.ww{
+    margin: 0 100px;
+
+}
+.parallax3{
+ height: 60vh;
+background-image:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.648)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-05.jpg");
+ background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+.i3{
+    position: absolute;
+    left: 40%;
+    background: white;
+    height: 60vh;
+    text-align: center;
+    
+}
+.m1{
+    margin-top: 90px;
+}
+
+/* contact page */
+
+.parallax4{
+ height: 60vh;
+background-image: linear-gradient(rgba(13, 59, 102, 0.166), rgba(11, 83, 151, 0.6)), 
+url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-06.jpg");
+ background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
