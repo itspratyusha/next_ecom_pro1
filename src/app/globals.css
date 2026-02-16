@@ -20,13 +20,13 @@ li{
     left: 220px;
     color: white;
 }
-.btn{
+.btn2{
 background-color: rgba(255, 255, 255, 0);
 border: 1px solid white;
 border-radius: 0px;
 color: white;
 }
-.btn:hover{
+.btn2:hover{
     background-color: white;
     color: black;
 
@@ -167,3 +167,9 @@ url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12
   background-size: cover;
 }
 
+.hh{
+    height: 100px;
+}
+.txt{
+    font-size:large;
+}
