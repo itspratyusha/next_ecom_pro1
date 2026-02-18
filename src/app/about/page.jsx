@@ -7,8 +7,10 @@ function Page() {
       <section className="parallax2 ">
         <nav className="navbar navbar-expand-lg navbar-dark p-4 nb container-fluid">
           <div className="container-fluid ">
-            <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt />
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <Link href="/">
+              <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt='' />
+            </Link>           
+             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
@@ -28,9 +30,9 @@ function Page() {
               </ul>
             </div>
             <div className="d-flex gap-4 text-white">
-             <Link className='text-decoration-none text-white' href="/">Home</Link>
-            <Link className='text-decoration-none text-white' href="/about">About</Link>
-            <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
+              <Link className='text-decoration-none text-white' href="/">Home</Link>
+              <Link className='text-decoration-none text-white' href="/about">About</Link>
+              <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
               <li>$0.00 </li>
               <li>icon</li>
               <li>icon</li>
@@ -69,144 +71,100 @@ function Page() {
               Class
               <br /> aptent taciti sociosqu ad litora torquent per conubia nostra </p>
           </div>
-        <div className='ww py-4'>
+          <div className='ww py-4'>
             <div className='row justify-content-center gap-3 text-center '>
-          <div className='col-lg-3 clr p-4 rounded '>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
-           <h3 className='pt-3'>Harvey Spector</h3>
-           <p>Founder - CEO</p>
-          </div>
-          <div className='col-lg-3 clr p-4 rounded '>
-            <img className=' w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team1-free-img.png" alt="" />
-           <h3 className='pt-3'>Jessica Pearson</h3>
-           <p>Founder - CEO</p>
-          </div>
-          <div className='col-lg-3 clr p-4 rounded'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team3-free-img.png" alt="" />
-           <h3 className='pt-3'>Rachel Zain</h3>
-           <p>Founder - CEO</p>
-          </div>
+              <div className='col-lg-3 clr p-4 rounded '>
+                <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
+                <h3 className='pt-3'>Harvey Spector</h3>
+                <p>Founder - CEO</p>
+              </div>
+              <div className='col-lg-3 clr p-4 rounded '>
+                <img className=' w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team1-free-img.png" alt="" />
+                <h3 className='pt-3'>Jessica Pearson</h3>
+                <p>Founder - CEO</p>
+              </div>
+              <div className='col-lg-3 clr p-4 rounded'>
+                <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team3-free-img.png" alt="" />
+                <h3 className='pt-3'>Rachel Zain</h3>
+                <p>Founder - CEO</p>
+              </div>
 
-          </div>
-          <div className='row justify-content-center gap-3 text-center py-2'>
-          <div className='col-lg-3 clr p-4'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team4free-img.png" alt="" />
-           <h3 className='pt-3'>Luise Litt</h3>
-           <p>Founder - CEO</p>
-          </div>
-          <div className='col-lg-3 clr p-4'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team5-free-img.png" alt="" />
-           <h3 className='pt-3'>Katrina Bennett</h3>
-           <p>Founder - CEO</p>
-          </div>
-          <div className='col-lg-3 clr p-4'>
-            <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team6-free-img.png" alt="" />
-           <h3 className='pt-3'>Mike Ross</h3>
-           <p>Founder - CEO</p>
-          </div>
+            </div>
+            <div className='row justify-content-center gap-3 text-center py-2'>
+              <div className='col-lg-3 clr p-4'>
+                <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team4free-img.png" alt="" />
+                <h3 className='pt-3'>Luise Litt</h3>
+                <p>Founder - CEO</p>
+              </div>
+              <div className='col-lg-3 clr p-4'>
+                <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team5-free-img.png" alt="" />
+                <h3 className='pt-3'>Katrina Bennett</h3>
+                <p>Founder - CEO</p>
+              </div>
+              <div className='col-lg-3 clr p-4'>
+                <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team6-free-img.png" alt="" />
+                <h3 className='pt-3'>Mike Ross</h3>
+                <p>Founder - CEO</p>
+              </div>
 
-          </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="parallax3 ">
-       
+
         <div className="i3 space-y-3 col-lg-3">
           <div className='line m1'></div>
           <div className="display-5 fw-semibold">Follow
           </div>
           <div className='d-flex gap-3 justify-content-center'>
-          <li>i</li>
-          <li>i</li>
-          <li>i</li>
-          <li>i</li>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
           </div>
-         
-          
-        
+
+
+
         </div>
 
       </section>
-<section className="py-5 ">
-    <div className="container">
-      <div className="row marg">
-        <div className="col-lg-3 ">
-          <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
-          <div className="text-center">
-            <h4>Worldwide Shipping </h4>
-            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+      <section className="py-5 ">
+        <div className="container">
+          <div className="row marg">
+            <div className="col-lg-3 ">
+              <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt />
+              <div className="text-center">
+                <h4>Worldwide Shipping </h4>
+                <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+              </div>
+            </div>
+            <div className="col-lg-3 ">
+              <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png" alt />
+              <div className="text-center">
+                <h4>Worldwide Shipping </h4>
+                <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png" alt />
+              <div className="text-center">
+                <h4>Worldwide Shipping </h4>
+                <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png" alt />
+              <div className="text-center">
+                <h4>Worldwide Shipping </h4>
+                <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-lg-3 ">
-          <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png" alt />
-          <div className="text-center">
-            <h4>Worldwide Shipping </h4>
-            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png" alt />
-          <div className="text-center">
-            <h4>Worldwide Shipping </h4>
-            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-          </div>
-        </div>
-        <div className="col-lg-3">
-          <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png" alt />
-          <div className="text-center">
-            <h4>Worldwide Shipping </h4>
-            <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section className="py-5">
-    <div className="container ">
-      <div className="row ">
-        <div className="col-lg-3 ">
-          <h3 className="pb-3">Quick Links </h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>My Account</p>
-          <p>Cart </p>
-          <p>Contact </p>
-        </div>
-        <div className="col-lg-3">
-          <h3 className="pb-3">Quick Links </h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>My Account</p>
-          <p>Cart </p>
-          <p>Contact </p>
-        </div>
-        <div className="col-lg-3">
-          <h3 className="pb-3">Quick Links </h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>My Account</p>
-          <p>Cart </p>
-          <p>Contact </p>
-        </div>
-        <div className="col-lg-3">
-          <h3 className="pb-3">Quick Links </h3>
-          <img className="w-50" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/playstore-free-img.png" alt />
-        </div>
-      </div>
-    </div>
-  </section>
-  <div className="border " />
-  <section className="pt-3">
-    <div className="container">
-      <div className="d-flex justify-content-between">
-        <p>Copyright © 2026 Brandstore</p>
-        <div>
-          <p>Powered by Brandstore </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+
 
     </>
   )

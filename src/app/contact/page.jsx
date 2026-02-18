@@ -1,7 +1,9 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function page() {
+    
     return (
         <>
             <section className="parallax4">
@@ -22,9 +24,7 @@ function page() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">MEN</a>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">ACCESSORIES</a>
-                                </li>
+                            
                             </ul>
                         </div>
                         <div className="d-flex gap-4 text-white">
@@ -109,51 +109,7 @@ function page() {
                             </div>
                         </div>
                     </div>
-                     <section className="py-5 mt-5">
-    <div className="container ">
-      <div className="row ">
-        <div className="col-lg-3 ">
-          <h3 className="pb-3">Quick Links </h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>My Account</p>
-          <p>Cart </p>
-          <p>Contact </p>
-        </div>
-        <div className="col-lg-3">
-          <h3 className="pb-3">Quick Links </h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>My Account</p>
-          <p>Cart </p>
-          <p>Contact </p>
-        </div>
-        <div className="col-lg-3">
-          <h3 className="pb-3">Quick Links </h3>
-          <p>Home</p>
-          <p>About</p>
-          <p>My Account</p>
-          <p>Cart </p>
-          <p>Contact </p>
-        </div>
-        <div className="col-lg-3">
-          <h3 className="pb-3">Quick Links </h3>
-          <img className="w-50" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/playstore-free-img.png" alt />
-        </div>
-      </div>
-    </div>
-  </section>
-  <div className="border " />
-  <section className="pt-3">
-    <div className="container">
-      <div className="d-flex justify-content-between">
-        <p>Copyright © 2026 Brandstore</p>
-        <div>
-          <p>Powered by Brandstore </p>
-        </div>
-      </div>
-    </div>
-  </section>
+                     
                 </div>
             </section>
         </>
