@@ -1,7 +1,24 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { FaUserLarge } from "react-icons/fa6";
+import { BsFacebook } from "react-icons/bs";
+import { IoLogoTwitter } from "react-icons/io";
+import { RiInstagramFill } from "react-icons/ri";
+import { SiGmail } from "react-icons/si";
+
+
+
 function Page() {
+  let [data, setData] = useState([])
+  let [category, setCategory] = useState([])
+  useEffect((a) => {
+    fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
+    fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
+  }, [])
   return (
+
     <>
 
       <section className="parallax2 ">
@@ -9,33 +26,31 @@ function Page() {
           <div className="container-fluid ">
             <Link href="/">
               <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt='' />
-            </Link>           
-             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">EVERYTHING</a>
+                  <Link className="nav-link active" aria-current="page" href="/categories">EVERYTHING</Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">WOMEN</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">MEN</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">ACCESSORIES</a>
-                </li>
+
+                {category.slice(0, 4).map((a) => (
+                  <li className="nav-item">
+                    <Link className="nav-link" href={`/categories/${a.slug}`}>{a.name}</Link>
+                  </li>
+                ))}
               </ul>
+
             </div>
             <div className="d-flex gap-4 text-white">
               <Link className='text-decoration-none text-white' href="/">Home</Link>
               <Link className='text-decoration-none text-white' href="/about">About</Link>
               <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
               <li>$0.00 </li>
-              <li>icon</li>
-              <li>icon</li>
+              <li className='text-white'><FaShoppingCart /></li>
+              <li className='text-white'><FaUserLarge /> </li>
             </div>
           </div>
         </nav>
@@ -118,11 +133,15 @@ function Page() {
           <div className='line m1'></div>
           <div className="display-5 fw-semibold">Follow
           </div>
-          <div className='d-flex gap-3 justify-content-center'>
-            <li>i</li>
-            <li>i</li>
-            <li>i</li>
-            <li>i</li>
+          <div className='d-flex gap-4 justify-content-center pt-3 fs-5'>
+            <span><BsFacebook />
+            </span>
+            <span><IoLogoTwitter />
+            </span>
+            <span><RiInstagramFill />
+            </span>
+            <span><SiGmail />
+            </span>
           </div>
 
 
@@ -130,7 +149,7 @@ function Page() {
         </div>
 
       </section>
-      <section className="py-5 ">
+      {/* <section className="py-5 ">
         <div className="container">
           <div className="row marg">
             <div className="col-lg-3 ">
@@ -163,7 +182,7 @@ function Page() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
     </>

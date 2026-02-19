@@ -1,6 +1,8 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { FaUserLarge } from "react-icons/fa6";
 
 
 function page() {
@@ -27,7 +29,7 @@ function page() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ">
                    <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="categories">EVERYTHING</a>
+          <Link class="nav-link active" aria-current="page" href="categories">EVERYTHING</Link>
         </li>
                   {category.slice(0, 4).map((a) => (
                     <li className="nav-item">
@@ -42,8 +44,9 @@ function page() {
               <Link className='text-decoration-none text-white' href="/about">About</Link>
               <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
               <li>$0.00 </li>
-              <li>icon</li>
-              <li>icon</li>
+             <li className='text-white'><FaShoppingCart /></li>
+              <li className='text-white'><FaUserLarge /> </li>
+              
             </div>
           </div>
         </nav>
@@ -65,16 +68,16 @@ function page() {
             <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
           </div>
           <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
           </div>
           <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-3.png" alt='' />
           </div>
           <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png" alt='' />
           </div>
           <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
+            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png" alt='' />
           </div>
         </div>
       </section>
@@ -110,7 +113,7 @@ function page() {
       </section>
       <section className="bgcol">
         <div className="container">
-          <h1 className="text-center py-4 ">Featured products</h1>
+          <h1 className="text-center py-4 ">FEATURED PRODUCTS</h1>
           <div className="row">
             {data.map((a) => (
               <div className="col-3 mb-4">
@@ -130,7 +133,7 @@ function page() {
       </section>
       <section className="py-5 bgcol parallax">
         <div className="container ">
-          <div className=" content">
+          <div className=" content1">
             <h4>Limited Time Offer </h4>
             <h2 className="display-5 fw-bold">Special Edition </h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec <br />
@@ -143,7 +146,7 @@ function page() {
       </section>
       <section className="py-5 ">
         <div className="container">
-          <div className="row marg">
+          <div className="row  ">
             <div className="col-lg-3 ">
               <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt='' />
               <div className="text-center">
@@ -154,21 +157,21 @@ function page() {
             <div className="col-lg-3 ">
               <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png" alt='' />
               <div className="text-center">
-                <h4>Worldwide Shipping </h4>
+                <h4>Best Quality </h4>
                 <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
               </div>
             </div>
             <div className="col-lg-3">
               <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png" alt='' />
               <div className="text-center">
-                <h4>Worldwide Shipping </h4>
+                <h4>Best Offers</h4>
                 <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
               </div>
             </div>
             <div className="col-lg-3">
               <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png" alt='' />
               <div className="text-center">
-                <h4>Worldwide Shipping </h4>
+                <h4>Secure Payments </h4>
                 <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
               </div>
             </div>

@@ -73,9 +73,6 @@ color: white;
     object-fit: cover;
     position: sticky;
 }
-.marg{
-    margin: 0 80px;
-}
 
 .a{
      position: fixed;
@@ -89,7 +86,7 @@ color: white;
   background-attachment: fixed;
 }
 .parallax {
-  height: 100vh;
+  height: 70vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.648)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
   background-attachment: fixed;
   display: flex;
@@ -98,7 +95,7 @@ color: white;
   color: white;
 }
 
-.content {
+.content1 {
   padding: 30px;
 }
 /* about page  */

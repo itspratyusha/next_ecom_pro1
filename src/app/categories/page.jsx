@@ -1,11 +1,14 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { FaUserLarge } from "react-icons/fa6";
 
 function page() {
     let [data, setData] = useState([])
     let [category, setCategory] = useState([])
       useEffect(() => {
+        
          fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
          fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
       }, [])
@@ -13,15 +16,16 @@ function page() {
     <>
      <nav className="navbar navbar-expand-lg navbar-light p-4  ">
           <div className="container-fluid ">
- <Link href="/">
+            <Link href="/">
             <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo@2x-free-img.png" alt='' />
-            </Link>            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </Link>           
+             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ">
                    <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="categories">EVERYTHING</a>
+          <Link class="nav-link active" aria-current="page" href="/categories">EVERYTHING</Link>
         </li>
                   {category.slice(0, 4).map((a) => (
                     <li className="nav-item">
@@ -36,14 +40,14 @@ function page() {
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
               <li className='text-black'>$0.00 </li>
-              <li className='text-black'>icon</li>
-              <li className='text-black'>icon</li>
+            <li className='text-black'><FaShoppingCart /></li>
+                                        <li className='text-black'><FaUserLarge /> </li>
             </div>
           </div>
      </nav>
         <section>
         <div className="container">
-          <h1 className="text-center py-4 ">Product Category</h1>
+          <h1 className="text-center py-4 fw-bold ">ALL IN ONE PRODUCTS</h1>
           <div className="row">
             {data.map((a) => (
               <div className="col-3 mb-4">

@@ -1,9 +1,16 @@
 "use client"
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { FaUserLarge } from "react-icons/fa6";
 
 function page() {
-    
+     let [data, setData]= useState([])
+        let [category, setCategory] = useState([])
+        useEffect((a)=>{
+         fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
+         fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
+        },[])
     return (
         <>
             <section className="parallax4">
@@ -15,25 +22,24 @@ function page() {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <a className="nav-link active" aria-current="page" href="#">EVERYTHING</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">WOMEN</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="#">MEN</a>
-                                </li>
-                            
-                            </ul>
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" href="/categories">EVERYTHING</Link>
+                </li>
+               
+                  {category.slice(0, 4).map((a) => (
+                    <li className="nav-item">
+                      <Link className="nav-link" href={`/categories/${a.slug}`}>{a.name}</Link>
+                    </li>
+                  ))}
+              </ul>
                         </div>
                         <div className="d-flex gap-4 text-white">
                             <Link className='text-decoration-none text-white' href="/">Home</Link>
                             <Link className='text-decoration-none text-white' href="/about">About</Link>
                             <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
                             <li>$0.00 </li>
-                            <li>icon</li>
-                            <li>icon</li>
+                            <li className='text-white'><FaShoppingCart /></li>
+                                                        <li className='text-white'><FaUserLarge /> </li>
                         </div>
                     </div>
                 </nav>
