@@ -1,22 +1,23 @@
 "use client"
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react"
+import { useParams } from "next/navigation"
+import Link from "next/link"
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
 
 function page() {
-    let [data, setData] = useState([])
+    let { id } = useParams()
+    let [product, setProduct] = useState()
     let [category, setCategory] = useState([])
-      useEffect(() => {
-        
-         fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
-         fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
-          
-      }, [])
-  return (
-    <>
-    <section>
-     <nav className="navbar navbar-expand-lg navbar-light p-4  ">
+
+    useEffect(() => {
+        fetch(`https://dummyjson.com/products/${id}`).then(a => a.json()).then(b => setProduct(b))     
+        fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))    
+    }, [id],[])
+
+    return (
+        <>
+        <nav className="navbar navbar-expand-lg navbar-light p-4  ">
           <div className="container-fluid ">
             <Link href="/">
             <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo@2x-free-img.png" alt='' />
@@ -43,39 +44,26 @@ function page() {
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
               <li className='text-black'>$0.00 </li>
             <li className='text-black'><FaShoppingCart /></li>
-              <li className='text-black'><FaUserLarge /> </li>
+                                        <li className='text-black'><FaUserLarge /> </li>
             </div>
           </div>
      </nav>
-     </section>
-        <section>
-        <div className="container">
-          <h1 className="text-center pb-5 fw-bold ">ALL IN ONE PRODUCTS</h1>
-          <div className="row">
-            {data.map((a) => (
-              <div className="col-3 mb-4">
-                 
-                 <div className="card p-3 h-100 border-0 shadow ">
-        <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
-        <img className="card-img border-0 w-75 h-100 mx-auto d-block card" src={a.thumbnail} alt='' /> </Link>
-        <div className="card-body text-center  ">
-           <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
-          <h5 className='fw-bold'>{a.title}</h5> </Link>
-          <div className='d-flex mt-4 justify-content-between align-items-center'>
-          <span  className='btn btc p-2'>Add to cart</span>
-          <span className=' fw-bold '>${a.price}</span>
-          </div>
+     <section>
+        <div className="container py-5">
+            
+            <div className="d-flex justify-content-between">  
+            <img src={product?.thumbnail} alt='' width="700" />  
+            <div className="row justify-content-center flex-column">
+            <h1 className="fw-bold display-5 text-center ">{product?.title}</h1>
+            <p className="py-3 f">{product?.description}</p>
+            <h3 className="fw-bold ">${product?.price}</h3>
+            </div>
+          
         </div>
-      </div>
-              </div>
-            ))}
-          </div>
-
-
         </div>
-      </section>
-    </>
-  )
+        </section>
+        </>
+    )
 }
 
 export default page

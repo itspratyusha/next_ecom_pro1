@@ -16,21 +16,23 @@ function page() {
             <section className="parallax4">
                 <nav className="navbar navbar-expand-lg navbar-dark p-4 nb container-fluid">
                     <div className="container-fluid ">
+                         <Link href="/">
                         <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt />
+                        </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon" />
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" href="/categories">EVERYTHING</Link>
-                </li>
-               
-                  {category.slice(0, 4).map((a) => (
-                    <li className="nav-item">
-                      <Link className="nav-link" href={`/categories/${a.slug}`}>{a.name}</Link>
+                            <ul className="navbar-nav gap-3 text-uppercase">
+                   <li class="nav-item text-white">
+          <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
+        </li>
+                  {category.slice(0, 5).map((a) => (
+                    <li className="nav-item ">
+                      <Link className="nav-link text-white" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
+              
               </ul>
                         </div>
                         <div className="d-flex gap-4 text-white">

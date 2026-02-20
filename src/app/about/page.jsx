@@ -31,16 +31,16 @@ function Page() {
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" href="/categories">EVERYTHING</Link>
-                </li>
-
-                {category.slice(0, 4).map((a) => (
-                  <li className="nav-item">
-                    <Link className="nav-link" href={`/categories/${a.slug}`}>{a.name}</Link>
-                  </li>
-                ))}
+               <ul className="navbar-nav gap-3 text-uppercase">
+                   <li class="nav-item text-white">
+          <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
+        </li>
+                  {category.slice(0, 5).map((a) => (
+                    <li className="nav-item ">
+                      <Link className="nav-link text-white" href={`/categories/${a.slug}`}>{a.name}</Link>
+                    </li>
+                  ))}
+              
               </ul>
 
             </div>

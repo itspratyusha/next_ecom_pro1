@@ -25,13 +25,13 @@ function page() {
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ">
-                   <li class="nav-item">
-          <Link class="nav-link active" aria-current="page" href="/categories">EVERYTHING</Link>
+               <ul className="navbar-nav gap-3 text-uppercase">
+                   <li class="nav-item text-white">
+          <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
         </li>
-                  {category.slice(0, 4).map((a) => (
-                    <li className="nav-item">
-                      <Link className="nav-link" href={`/categories/${a.slug}`}>{a.name}</Link>
+                  {category.slice(0, 5).map((a) => (
+                    <li className="nav-item ">
+                      <Link className="nav-link text-black" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
@@ -49,18 +49,23 @@ function page() {
           </div>
      </nav>
      <div className='container'>
-      <h1 className='fw-bold text-uppercase'>{cid}</h1>
+      <h1 className='fw-bold text-uppercase pb-5'>{cid}</h1>
       <div className='row'>
       {data.map((a) => (
            
               <div className="col-lg-3 mb-4">
-                <div className="card p-3">
-                  <img className="card-img w-75" src={a.thumbnail} alt='' />
-                  <div className="card-body hh">
-                    <h4 className='txt'>{a.title}</h4>
-                    <p>${a.price}</p>
-                  </div>
-                </div>
+                 <div className="card p-3 h-100 border-0 shadow ">
+        <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
+        <img className="card-img border-0 w-75 hit mx-auto d-block card" src={a.thumbnail} alt='' /> </Link>
+        <div className="card-body text-center  ">
+           <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
+          <h5 className='fw-bold'>{a.title}</h5> </Link>
+          <div className='d-flex mt-4 justify-content-between align-items-center'>
+          <span  className='btn btc p-2'>Add to cart</span>
+          <span className=' fw-bold '>${a.price}</span>
+          </div>
+        </div>
+      </div>
               </div>
              
             ))}
