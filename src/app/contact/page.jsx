@@ -63,29 +63,29 @@ function page() {
                                 <div className='card bg-white p-4 rounded shadow border-0'>
                                     <h2 className='fw-semibold'>Sales</h2>
                                     <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
-                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                   <p className=' fw-bold'> <Link href="tel:1800 143 5562" className='text-decoration-none'>1800 143 5562</Link> </p>
                                 </div>
                             </div>
 
                             <div className='col-lg-3'>
                                 <div className='card bg-white p-4 rounded shadow border-0'>
-                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <h2 className='fw-semibold'>Complaints</h2>
                                     <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
-                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                    <p className=' fw-bold'> <Link href="tel:1900 143 5562" className='text-decoration-none'>1900 143 5562</Link> </p>
                                 </div>
                             </div>
                             <div className='col-lg-3'>
                                 <div className='card bg-white p-4 rounded shadow border-0'>
-                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <h2 className='fw-semibold'>Returns</h2>
                                     <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
-                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                     <p className=' fw-bold'> <Link href="tel:1100 143 5562" className='text-decoration-none'>1100 143 5562</Link> </p>
                                 </div>
                             </div>
                             <div className='col-lg-3 '>
                                 <div className='card bg-white p-4 rounded shadow border-0'>
-                                    <h2 className='fw-semibold'>Sales</h2>
+                                    <h2 className='fw-semibold'>Marketing</h2>
                                     <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
-                                    <p className='text-primary fw-bold'>1800 123 4567 </p>
+                                    <p className=' fw-bold'> <Link href="tel:1000 143 5562" className='text-decoration-none'>1000 143 5562</Link> </p>
                                 </div>
                             </div>
                         </div>
