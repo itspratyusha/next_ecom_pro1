@@ -1,10 +1,12 @@
 "use client"
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
+import { CartContext } from '../context/CartContext';
 
 function page() {
+    let {state, dispatch} = useContext(CartContext)
     let [data, setData] = useState([])
     let [category, setCategory] = useState([])
       useEffect(() => {
@@ -42,7 +44,7 @@ function page() {
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
               <li className='text-black'>$0.00 </li>
-            <li className='text-black'><FaShoppingCart /></li>
+            <li className='text-black'><Link className='text-decoration-none text-black' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
               <li className='text-black'><FaUserLarge /> </li>
             </div>
           </div>
@@ -62,7 +64,7 @@ function page() {
            <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
           <h5 className='fw-bold'>{a.title}</h5> </Link>
           <div className='d-flex mt-4 justify-content-between align-items-center'>
-          <span  className='btn btc p-2'>Add to cart</span>
+         <span  className='btn btc p-2' onClick={() => dispatch({type:"addtocart", payload:a})}>Add to cart </span>
           <span className=' fw-bold '>${a.price}</span>
           </div>
         </div>

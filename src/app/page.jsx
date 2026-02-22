@@ -1,11 +1,13 @@
 "use client"
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
+import { CartContext } from './context/CartContext';
 
 
 function page() {
+  let {state, dispatch} = useContext(CartContext)
   let [data, setData] = useState([])
   let [category, setCategory] = useState([])
   useEffect(() => {
@@ -28,7 +30,7 @@ function page() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav gap-3 text-uppercase">
-                   <li class="nav-item text-white">
+                   <li className="nav-item text-white">
           <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
         </li>
                   {category.slice(0, 5).map((a) => (
@@ -43,9 +45,8 @@ function page() {
               <Link className='text-decoration-none text-white' href="/">Home</Link>
               <Link className='text-decoration-none text-white' href="/about">About</Link>
               <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
-              <li>$0.00 </li>
-             <li className='text-white'><FaShoppingCart /></li>
-              <li className='text-white'><FaUserLarge /> </li>
+             <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
+              <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
               
             </div>
           </div>
@@ -130,7 +131,7 @@ function page() {
           <h5 className='fw-bold'>{a.title}</h5> 
           </Link>
           <div className='d-flex mt-4 justify-content-between align-items-center'>
-          <span  className='btn btc p-2'>Add to cart</span>
+          <span  className='btn btc p-2' onClick={() => dispatch({type:"addtocart", payload:a})}>Add to cart </span>
           <span className=' fw-bold '>${a.price}</span>
           </div>
         </div>
