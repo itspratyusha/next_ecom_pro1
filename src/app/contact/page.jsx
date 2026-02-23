@@ -3,8 +3,10 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
+import { CartContext } from '../context/CartContext';
 
 function page() {
+    let {state, dispatch} = React.useContext(CartContext)
      let [data, setData]= useState([])
         let [category, setCategory] = useState([])
         useEffect((a)=>{
@@ -39,9 +41,8 @@ function page() {
                             <Link className='text-decoration-none text-white' href="/">Home</Link>
                             <Link className='text-decoration-none text-white' href="/about">About</Link>
                             <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
-                            <li>$0.00 </li>
-                            <li className='text-white'><FaShoppingCart /></li>
-                                                        <li className='text-white'><FaUserLarge /> </li>
+                           <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
+                            <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
                         </div>
                     </div>
                 </nav>

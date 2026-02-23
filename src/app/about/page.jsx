@@ -7,10 +7,12 @@ import { BsFacebook } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
+import { CartContext } from '../context/CartContext';
 
 
 
 function Page() {
+      let {state, dispatch} = React.useContext(CartContext)
   let [data, setData] = useState([])
   let [category, setCategory] = useState([])
   useEffect((a) => {
@@ -48,9 +50,8 @@ function Page() {
               <Link className='text-decoration-none text-white' href="/">Home</Link>
               <Link className='text-decoration-none text-white' href="/about">About</Link>
               <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
-              <li>$0.00 </li>
-              <li className='text-white'><FaShoppingCart /></li>
-              <li className='text-white'><FaUserLarge /> </li>
+              <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
+              <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
             </div>
           </div>
         </nav>

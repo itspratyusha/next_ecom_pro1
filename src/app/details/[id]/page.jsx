@@ -7,8 +7,9 @@ import { FaUserLarge } from "react-icons/fa6";
 
 function page() {
     let { id } = useParams()
-    let [product, setProduct] = useState()
+   let {state, dispatch} = React.useContext(CartContext) 
     let [category, setCategory] = useState([])
+    let [product, setProduct] = useState({})
 
     useEffect(() => {
         fetch(`https://dummyjson.com/products/${id}`).then(a => a.json()).then(b => setProduct(b))     
@@ -42,9 +43,8 @@ function page() {
               <Link className='text-decoration-none text-black ' href="/">Home</Link>
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
-              <li className='text-black'>$0.00 </li>
-            <li className='text-black'><FaShoppingCart /></li>
-                                        <li className='text-black'><FaUserLarge /> </li>
+            <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
+              <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
             </div>
           </div>
      </nav>

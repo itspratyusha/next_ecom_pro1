@@ -8,6 +8,7 @@ import { FaUserLarge } from "react-icons/fa6";
 
 function page() {
     let {cid}=useParams()
+    
       let {state, dispatch} = useContext  (CartContext)
      let [data, setData]=useState([])
      let [category, setCategory] = useState([])
@@ -29,7 +30,7 @@ function page() {
             <div className="collapse navbar-collapse" id="navbarNav">
                <ul className="navbar-nav gap-3 text-uppercase">
                    <li className="nav-item text-white">
-          <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
+          <Link className="nav-link active fw-bold" aria-current="page" href="/categories">EVERYTHING</Link>
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item ">
@@ -43,10 +44,8 @@ function page() {
               <Link className='text-decoration-none text-black ' href="/">Home</Link>
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
-              <li className='text-black'>$0.00 </li>
-              <li className='text-black'><Link className='text-decoration-none text-black' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
-              <li className='text-black'><FaUserLarge />
-</li>
+             <li><Link className='text-decoration-none text-black' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
+              <li><Link className='text-decoration-none text-black' href="/user"><FaUserLarge /></Link> </li>
             </div>
           </div>
      </nav>
@@ -56,7 +55,7 @@ function page() {
       {data.map((a) => (
            
               <div className="col-lg-3 mb-4">
-                 <div className="card p-3 h-100 border-0 shadow ">
+                 <div className="card product-card p-3 h-100 border-0 shadow ">
         <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
         <img className="card-img border-0 w-75 hit mx-auto d-block card" src={a.thumbnail} alt='' /> </Link>
         <div className="card-body text-center  ">

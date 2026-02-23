@@ -214,3 +214,29 @@ url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12
 .hit{
     height: 100px;
 }
+/* user login pagee */
+.marg2{
+    margin: 12px 370px;
+}
+.marg3{
+    margin: 20px 60px;
+}
+/* product card */
+.product-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+

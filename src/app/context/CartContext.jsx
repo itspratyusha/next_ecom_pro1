@@ -5,10 +5,10 @@ let cartReducer = (state, action) => {
     switch (action.type) {
         case "addtocart": 
             return {cart: [...state.cart, action.payload] }
-        // case "removefromcart":
-        //     return {cart: state.cart.filter(item => item.id !== action.payload) 
+        case "removefromcart":
+            return {cart: state.cart.filter(item => item.id !== action.payload) 
 
-        //     }   
+            }   
         }  
     }   
 
