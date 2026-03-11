@@ -34,19 +34,19 @@ function page() {
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item ">
-                      <Link className="nav-link text-black" href={`/categories/${a.slug}`}>{a.name}</Link>
+                      <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
             </div>
-            <div className="d-flex gap-4 text-white">
+            <ul className="d-flex gap-4 text-white">
               <Link className='text-decoration-none text-black ' href="/">Home</Link>
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
              <li><Link className='text-decoration-none text-black' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
               <li><Link className='text-decoration-none text-black' href="/user"><FaUserLarge /></Link> </li>
-            </div>
+            </ul>
           </div>
      </nav>
      <div className='container'>
@@ -54,11 +54,11 @@ function page() {
       <div className='row'>
       {data.map((a) => (
            
-              <div className="col-lg-3 mb-4">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                  <div className="card product-card p-3 h-100 border-0 shadow ">
         <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
-        <img className="card-img border-0 w-75 hit mx-auto d-block card" src={a.thumbnail} alt='' /> </Link>
-        <div className="card-body text-center  ">
+        <img className="card-img-top border-0 w-75 hit mx-auto d-block card img-fluid" src={a.thumbnail} alt='' /> </Link>
+        <div className="card-body d-flex flex-column justify-content-between text-center mt-3 ">
            <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
           <h5 className='fw-bold'>{a.title}</h5> </Link>
           <div className='d-flex mt-4 justify-content-between align-items-center'>

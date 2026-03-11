@@ -28,24 +28,24 @@ function page() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                <ul className="navbar-nav gap-3 text-uppercase">
-                   <li class="nav-item text-white">
+                   <li className="nav-item text-white">
           <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
         </li>
                   {category.slice(0, 5).map((a) => (
-                    <li className="nav-item ">
-                      <Link className="nav-link text-black" href={`/categories/${a.slug}`}>{a.name}</Link>
+                    <li className="nav-item " key={a.slug}>
+                      <Link className="nav-link text-black d-none d-md-block d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
             </div>
-            <div className="d-flex gap-4 text-white">
+            <ul className="d-flex gap-4 text-white">
               <Link className='text-decoration-none text-black ' href="/">Home</Link>
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
                    <li><Link className='text-decoration-none text-black' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
               <li><Link className='text-decoration-none text-black' href="/user"><FaUserLarge /></Link> </li>
-            </div>
+            </ul>
           </div>
      </nav>
      </section>
@@ -54,12 +54,15 @@ function page() {
           <h1 className="text-center pb-5 fw-bold ">ALL IN ONE PRODUCTS</h1>
           <div className="row">
             {data.map((a) => (
-              <div className="col-3 mb-4">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={a.id}>
                  
-                 <div className="card product-card p-3 h-100 border-0 shadow ">
+        <div className="card product-card p-3 h-100 border-0 shadow ">
         <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
-        <img className="card-img border-0 w-75 h-100 mx-auto d-block card" src={a.thumbnail} alt='' /> </Link>
-        <div className="card-body text-center  ">
+        <img className=" card-img-top img-fluid mx-auto d-block w-75"  
+        style={{ height: "200px", objectFit: "contain" }}
+         src={a.thumbnail} alt='' /> 
+        </Link>
+        <div className="card-body d-flex flex-column justify-content-between text-center mt-3 ">
            <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
           <h5 className='fw-bold'>{a.title}</h5> </Link>
           <div className='d-flex mt-4 justify-content-between align-items-center'>

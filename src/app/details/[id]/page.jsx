@@ -4,6 +4,7 @@ import { useParams } from "next/navigation"
 import Link from "next/link"
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserLarge } from "react-icons/fa6";
+import { CartContext } from "@/app/context/CartContext";
 
 function page() {
     let { id } = useParams()

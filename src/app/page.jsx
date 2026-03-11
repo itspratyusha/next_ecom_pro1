@@ -20,7 +20,7 @@ function page() {
     <>
 
       <section className="parallax1">
-        <nav className="navbar navbar-expand-lg navbar-dark p-4 nb container-fluid">
+          <nav className="navbar navbar-expand-lg navbar-dark p-3 nb">
           <div className="container-fluid ">
             <Link href="/">
             <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt='' />
@@ -35,20 +35,20 @@ function page() {
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item ">
-                      <Link className="nav-link text-white" href={`/categories/${a.slug}`}>{a.name}</Link>
+                      <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
             </div>
-            <div className="d-flex gap-4 text-white">
+            <ul className="d-flex gap-4 text-white ">
               <Link className='text-decoration-none text-white' href="/">Home</Link>
               <Link className='text-decoration-none text-white' href="/about">About</Link>
               <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
              <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
               <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
               
-            </div>
+            </ul>
           </div>
         </nav>
         <div className="i space-y-3">
@@ -66,28 +66,29 @@ function page() {
 
       </section>
       <section className="container py-5">
-        <div className="d-flex gap-2 p-4 justify-content-between">
-          <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
+        <div className="row text-center justify-content-center">
+     
+          <div className='col-6 col-md-2'>
+            <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
           </div>
-          <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
+          <div className='col-6 col-md-2'>
+            <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
           </div>
-          <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-3.png" alt='' />
+          <div className='col-6 col-md-2'>
+            <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-3.png" alt='' />
           </div>
-          <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png" alt='' />
+          <div className='col-6 col-md-2'>
+            <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png" alt='' />
           </div>
-          <div>
-            <img src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
+          <div className='col-6 col-md-2'>
+            <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
           </div>
         </div>
       </section>
       <section className="py-4">
         <div className="container ">
           <div className="row ">
-            <div className="col-lg-4 bar">
+            <div className="col-12 col-md-6 col-lg-4 bar mb-2">
               <img className="w-100 hi " src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/women-fashion-free-img.jpg" alt='' />
               <div className="pos">
                 <h3> 20% Off On Beauty </h3>
@@ -95,7 +96,7 @@ function page() {
                 <Link href={`/categories/beauty/`} className="p-2  btn1"> Shop now</Link>
               </div>
             </div>
-            <div className="col-lg-4 bar ">
+            <div className="col-12 col-md-6 col-lg-4 bar mb-2">
               <img className="w-100 hi " src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/men-fashion-free-img.jpg" alt='' />
               <div className="pos">
                 <h3> 10% Off On Perfume </h3>
@@ -103,8 +104,8 @@ function page() {
                 <Link href={`/categories/fragrances/`} className="p-2  btn1"> Shop now</Link>
               </div>
             </div>
-            <div className="col-lg-4 bar">
-              <img className="w-100 hi" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/footwear-free-img.jpg" alt='' />
+            <div className="col-12 col-md-6 col-lg-4 bar mb-2">
+              <img className="w-100 hi " src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/footwear-free-img.jpg" alt='' />
               <div className="pos">
                 <h3> 40% Off On Decoration </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac dictum. </p>
@@ -115,12 +116,13 @@ function page() {
         </div>
       </section>
       <section className="bgcol">
+
         <div className="container">
           <h1 className="text-center py-4 ">FEATURED PRODUCTS</h1>
           <div className="row">
             
           {data.map((a) => (
-  <div className="col-3 mb-4">
+  <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
     
       <div className="card p-3 h-100 border-0 shadow ">
         <Link href={`/details/${a.id}`}className="text-decoration-none text-dark">
@@ -158,28 +160,28 @@ function page() {
       <section className="py-5 ">
         <div className="container">
           <div className="row  ">
-            <div className="col-lg-3 ">
+            <div className="col-12 col-sm-6 col-lg-3 mb-4 ">
               <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/globe-free-img.png" alt='' />
               <div className="text-center">
                 <h4>Worldwide Shipping </h4>
                 <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
               </div>
             </div>
-            <div className="col-lg-3 ">
+            <div className="col-12 col-sm-6 col-lg-3 mb-4 ">
               <img className=" pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/quality-free-img.png" alt='' />
               <div className="text-center">
                 <h4>Best Quality </h4>
                 <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-12 col-sm-6 col-lg-3 mb-4">
               <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/tag-free-img.png" alt='' />
               <div className="text-center">
                 <h4>Best Offers</h4>
                 <p>It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-12 col-sm-6 col-lg-3 mb-4">
               <img className="pb-3 d-block mx-auto img-fluid imz" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/lock-free-img.png" alt='' />
               <div className="text-center">
                 <h4>Secure Payments </h4>

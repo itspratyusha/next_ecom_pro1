@@ -24,7 +24,7 @@ function Page() {
     <>
 
       <section className="parallax2 ">
-        <nav className="navbar navbar-expand-lg navbar-dark p-4 nb container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-dark p-4 nb">
           <div className="container-fluid ">
             <Link href="/">
               <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt='' />
@@ -39,20 +39,20 @@ function Page() {
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item ">
-                      <Link className="nav-link text-white" href={`/categories/${a.slug}`}>{a.name}</Link>
+                      <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
 
             </div>
-            <div className="d-flex gap-4 text-white">
+            <ul className="d-flex gap-4 text-white">
               <Link className='text-decoration-none text-white' href="/">Home</Link>
               <Link className='text-decoration-none text-white' href="/about">About</Link>
               <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
               <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
               <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
-            </div>
+            </ul>
           </div>
         </nav>
         <div className="i2 space-y-3">
@@ -64,14 +64,14 @@ function Page() {
       <section className='clr py-5'>
         <div className='container clr1'>
           <div className='row'>
-            <div className='col-lg-6 d-flex flex-column justify-content-center'>
+            <div className='col-12 col-sm-12 col-md-12 col-lg-6 d-flex flex-column justify-content-center'>
               <div className='line1 ms-5'></div>
               <h1 className='ms-5'>Who We Are</h1>
               <p className='ms-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. </p>
             </div>
 
             <div className='col-lg-6 p-0'>
-              <img className='w-100' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/slide-image-free-img.jpg" alt="" />
+              <img className='w-100 img-fluid p-2' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/slide-image-free-img.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -134,14 +134,14 @@ function Page() {
           <div className='line m1'></div>
           <div className="display-5 fw-semibold">Follow
           </div>
-          <div className='d-flex gap-4 justify-content-center pt-3 fs-5'>
-            <span><BsFacebook />
+          <div className='row gap-4 justify-content-center pt-3 fs-5'>
+            <span className='col-12 col-lg-auto col-md-3'><BsFacebook />
             </span>
-            <span><IoLogoTwitter />
+            <span className='col-12 col-lg-auto col-md-3'><IoLogoTwitter />
             </span>
-            <span><RiInstagramFill />
+            <span className='col-12 col-lg-auto col-md-3' ><RiInstagramFill />
             </span>
-            <span><SiGmail />
+            <span className='col-12 col-lg-auto col-md-3'><SiGmail />
             </span>
           </div>
 

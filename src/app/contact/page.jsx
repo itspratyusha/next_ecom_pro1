@@ -16,7 +16,7 @@ function page() {
     return (
         <>
             <section className="parallax4">
-                <nav className="navbar navbar-expand-lg navbar-dark p-4 nb container-fluid">
+                <nav className="navbar navbar-expand-lg navbar-dark p-4 nb ">
                     <div className="container-fluid ">
                          <Link href="/">
                         <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt />
@@ -31,19 +31,19 @@ function page() {
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item ">
-                      <Link className="nav-link text-white" href={`/categories/${a.slug}`}>{a.name}</Link>
+                      <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
                         </div>
-                        <div className="d-flex gap-4 text-white">
+                        <ul className="d-flex gap-4 text-white">
                             <Link className='text-decoration-none text-white' href="/">Home</Link>
                             <Link className='text-decoration-none text-white' href="/about">About</Link>
                             <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
                            <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
                             <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
-                        </div>
+                        </ul>
                     </div>
                 </nav>
                 <div className="i2 space-y-3">
@@ -60,7 +60,7 @@ function page() {
                         <div className='line mt-3'></div>
 
                         <div className='row justify-content-center g-4 py-4'>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-3 '>
                                 <div className='card bg-white p-4 rounded shadow border-0'>
                                     <h2 className='fw-semibold'>Sales</h2>
                                     <p>Vestibulum ante ipsum primis in faucibus orci luctus. </p>
@@ -92,10 +92,10 @@ function page() {
                         </div>
                     </div>
                     <div className='row'>
-                        <div className='col-lg-6  d-flex flex-column justify-content-center'>
+                        <div className='col-lg-6  d-flex flex-column justify-content-center '>
                             <span className='fw-bold'>Don't be a stranger!</span>
                             <h1>You tell us. We listen. </h1>
-                            <p>Cras elementum finibus lacus nec lacinia. Quisque non convallis nisl, eu condimentum sem. Proin dignissim libero lacus, ut eleifend magna vehicula et. Nam mattis est sed tellus. </p>
+                            <p className='d-none d-lg-flex'>Cras elementum finibus lacus nec lacinia. Quisque non convallis nisl, eu condimentum sem. Proin dignissim libero lacus, ut eleifend magna vehicula et. Nam mattis est sed tellus. </p>
                         </div>
 
                         <div className='col-lg-6'>
