@@ -24,9 +24,26 @@ font-size:16px;
 font-size:14px;
 padding:12px;
 }
+.parallax1,.parallax,.parallax2,.parallax3,.parallax4{
+  background-attachment: scroll;
+  background-position: center;
 }
-.navbar-toggler{
-  display: none;
+}
+
+
+.navbar-nav .nav-link:hover{
+  color: #000000;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.942);
+}
+.ais{
+    color: #000000;
+}
+.ais:hover{
+    color: #003366 !important;
+    font-weight: bold;
+}
+.ais1:hover{
+    transform: scale(0.8);
 }
 
 
