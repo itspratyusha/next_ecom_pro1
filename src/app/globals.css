@@ -4,6 +4,13 @@
 
 
 @media (max-width:768px){
+.i{
+ left: 25% !important;
+    bottom: 290px !important;
+}
+.navv{
+     width:110px !important;
+  }
 
 .i h1{
 font-size:28px;
@@ -15,9 +22,11 @@ font-size:16px;
 
 .btn1,.btn2{
 font-size:14px;
-padding:8px;
+padding:12px;
 }
-
+}
+.navbar-toggler{
+  display: none;
 }
 
 

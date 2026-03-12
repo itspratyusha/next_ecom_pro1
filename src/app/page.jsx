@@ -22,14 +22,14 @@ function page() {
       <section className="parallax1">
           <nav className="navbar navbar-expand-lg navbar-dark p-3 nb">
           <div className="container-fluid ">
-            <Link href="/">
+            <Link href="/" className="d-flex align-items-center">
             <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt='' />
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav gap-3 text-uppercase">
+            <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+              <ul className="navbar-nav gap-3 text-uppercase d-flex align-items-center">
                    <li className="nav-item text-white">
           <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
         </li>
@@ -66,21 +66,21 @@ function page() {
 
       </section>
       <section className="container py-5">
-        <div className="row text-center justify-content-center">
+        <div className="row text-center justify-content-center ">
      
-          <div className='col-6 col-md-2'>
+          <div className='col-6 col-md-2 p-3'>
             <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-4.png" alt='' />
           </div>
-          <div className='col-6 col-md-2'>
+          <div className='col-6 col-md-2 p-3'>
             <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
           </div>
-          <div className='col-6 col-md-2'>
+          <div className='col-6 col-md-2 p-3'>
             <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-3.png" alt='' />
           </div>
-          <div className='col-6 col-md-2'>
+          <div className='col-6 col-md-2 p-3'>
             <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2022/08/client-logo-5.png" alt='' />
           </div>
-          <div className='col-6 col-md-2'>
+          <div className='col-6 col-md-2 p-3'>
             <img className='img-fluid' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/client-logo-2.png" alt='' />
           </div>
         </div>
@@ -153,7 +153,7 @@ function page() {
               ullamcorper mattis, pulvinar dapibus leo. </p>
 
             <h4 className="pb-3">Buy This T-shirt At 20% Discount, Use Code OFF20 </h4>
-            <button className="p-3 border-0 btn1 fw-bold w-25">Shop now</button>
+           <Link href={`/categories/`} className=" btn1 p-3 border-0 btn1 fw-bold px-5  "> Shop now</Link>
           </div>
         </div>
       </section>
