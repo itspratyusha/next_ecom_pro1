@@ -8,6 +8,7 @@ import { IoLogoTwitter } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
 import { CartContext } from '../context/CartContext';
+import { motion, useScroll, useMotionValueEvent } from "motion/react"
 
 
 
@@ -15,6 +16,17 @@ function Page() {
       let {state, dispatch} = React.useContext(CartContext)
   let [data, setData] = useState([])
   let [category, setCategory] = useState([])
+   const { scrollY } = useScroll()
+    const [hidden, setHidden] = useState(false)
+
+    useMotionValueEvent(scrollY, "change", (current) => {
+        const previous = scrollY.getPrevious() ?? 0
+        if (current > previous && current > 150) {
+            setHidden(true)
+        } else {
+            setHidden(false)
+        }
+    })
   useEffect((a) => {
     fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
     fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
@@ -22,39 +34,66 @@ function Page() {
   return (
 
     <>
-
-      <section className="parallax2 ">
-        <nav className="navbar navbar-expand-lg navbar-dark p-4 nb">
-          <div className="container-fluid ">
-            <Link href="/">
-              <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt='' />
+ <motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb1"
+          animate={{
+            y: hidden ? -140 : 0,
+            opacity: hidden ? 0 : 1,
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          >
+          <div className="container-fluid d-flex align-items-center">
+            <Link href="/" className="d-flex align-items-center">
+              <img className="navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt="" />
             </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
-            </button>
+
             <div className="collapse navbar-collapse" id="navbarNav">
-               <ul className="navbar-nav gap-3 text-uppercase">
-                   <li class="nav-item text-white">
-          <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
-        </li>
-                  {category.slice(0, 5).map((a) => (
-                    <li className="nav-item ">
-                      <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
-                    </li>
-                  ))}
-              
+
+
+              <ul className="navbar-nav gap-3 text-uppercase align-items-center ms-4">
+                <li className="nav-item">
+                  <Link className="nav-link fw-bold" href="/categories">EVERYTHING</Link>
+                </li>
+
+                {category.slice(0, 5).map((a) => (
+                  <li key={a.slug} className="nav-item">
+                    <Link className="nav-link text-white" href={`/categories/${a.slug}`}>
+                      {a.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <ul className="navbar-nav ms-auto align-items-center gap-4 nav-right">
+                <li className="nav-item">
+                  <Link className="nav-link text-white" href="/">Home</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-white" href="/about">About</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-white" href="/contact">Contact</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-white nav-icon" href="/cart">
+                    <FaShoppingCart /> {state.cart.length}
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-white nav-icon" href="/user">
+                    <FaUserLarge />
+                  </Link>
+                </li>
               </ul>
 
             </div>
-            <ul className="d-flex gap-4 text-white">
-              <Link className='text-decoration-none text-white' href="/">Home</Link>
-              <Link className='text-decoration-none text-white' href="/about">About</Link>
-              <Link className='text-decoration-none text-white' href="/contact">Contact</Link>
-              <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
-              <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
-            </ul>
           </div>
-        </nav>
+        </motion.nav>
+      <section className="parallax2 ">
+       
         <div className="i2 space-y-3">
           <h1 className="display-3 fw-semibold">About us</h1>
         </div>

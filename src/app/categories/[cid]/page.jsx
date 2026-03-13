@@ -34,13 +34,13 @@ function page() {
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item ">
-                      <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
+                      <Link className="nav-link text-black d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
             </div>
-            <ul className="d-flex gap-4 text-white">
+            <ul className="d-flex gap-4 text-black">
               <Link className='text-decoration-none text-black ' href="/">Home</Link>
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>

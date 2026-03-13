@@ -69,10 +69,19 @@ li{
     position: relative;
 }
 .nb{
-    position: absolute;
-    top: 0px;
-    background-color: rgba(22, 67, 156, 0.196);
+   
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+    background-color: #297EB3;
 }
+.navbar.nb1{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: rgba(0,30,51,0.4) !important;
+}
+
 .i{
     object-fit: cover;
     position: absolute;
