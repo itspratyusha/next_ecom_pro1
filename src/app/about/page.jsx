@@ -27,14 +27,29 @@ function Page() {
             setHidden(false)
         }
     })
-  useEffect((a) => {
+  useEffect(() => {
     fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
     fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
   }, [])
   return (
 
     <>
- <motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb1"
+ 
+      <section className="parallax2 ">
+      
+        <div className="i2 space-y-3">
+          <h1 className="display-3 fw-semibold">About us</h1>
+        </div>
+
+      </section>
+       <motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb1"
+        style={{ 
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    zIndex: 1000
+  }}
           animate={{
             y: hidden ? -140 : 0,
             opacity: hidden ? 0 : 1,
@@ -92,13 +107,6 @@ function Page() {
             </div>
           </div>
         </motion.nav>
-      <section className="parallax2 ">
-       
-        <div className="i2 space-y-3">
-          <h1 className="display-3 fw-semibold">About us</h1>
-        </div>
-
-      </section>
 
       <section className='clr py-5'>
         <div className='container clr1'>
