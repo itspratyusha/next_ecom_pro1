@@ -34,22 +34,8 @@ function Page() {
   return (
 
     <>
- 
-      <section className="parallax2 ">
-      
-        <div className="i2 space-y-3">
-          <h1 className="display-3 fw-semibold">About us</h1>
-        </div>
-
-      </section>
-       <motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb1"
-        style={{ 
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    zIndex: 1000
-  }}
+  <motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb2"
+        style={{ position: 'fixed',top: 0,left: 0,width: '100%',zIndex: 1000}}
           animate={{
             y: hidden ? -140 : 0,
             opacity: hidden ? 0 : 1,
@@ -108,6 +94,14 @@ function Page() {
           </div>
         </motion.nav>
 
+      <section className="parallax2 ">
+      
+        <div className="i2 space-y-3">
+          <h1 className="display-3 fw-semibold">About us</h1>
+        </div>
+
+      </section>
+      
       <section className='clr py-5'>
         <div className='container clr1'>
           <div className='row'>
@@ -118,7 +112,7 @@ function Page() {
             </div>
 
             <div className='col-lg-6 p-0'>
-              <img className='w-100 img-fluid p-2' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/slide-image-free-img.jpg" alt="" />
+              <img className='w-100 img-fluid p-2 round1' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/slide-image-free-img.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -136,17 +130,17 @@ function Page() {
           </div>
           <div className='ww py-4'>
             <div className='row justify-content-center gap-3 text-center '>
-              <div className='col-lg-3 clr p-4 rounded '>
+             <div className='col-lg-3 team-card p-4'>
                 <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team2-free-img.png" alt="" />
                 <h3 className='pt-3'>Harvey Spector</h3>
                 <p>Founder - CEO</p>
               </div>
-              <div className='col-lg-3 clr p-4 rounded '>
+              <div className='col-lg-3 team-card p-4'>
                 <img className=' w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team1-free-img.png" alt="" />
                 <h3 className='pt-3'>Jessica Pearson</h3>
                 <p>Founder - CEO</p>
               </div>
-              <div className='col-lg-3 clr p-4 rounded'>
+             <div className='col-lg-3 team-card p-4'>
                 <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team3-free-img.png" alt="" />
                 <h3 className='pt-3'>Rachel Zain</h3>
                 <p>Founder - CEO</p>
@@ -154,17 +148,17 @@ function Page() {
 
             </div>
             <div className='row justify-content-center gap-3 text-center py-2'>
-              <div className='col-lg-3 clr p-4'>
+              <div className='col-lg-3 team-card p-4'>
                 <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team4free-img.png" alt="" />
                 <h3 className='pt-3'>Luise Litt</h3>
                 <p>Founder - CEO</p>
               </div>
-              <div className='col-lg-3 clr p-4'>
+              <div className='col-lg-3 team-card p-4'>
                 <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team5-free-img.png" alt="" />
                 <h3 className='pt-3'>Katrina Bennett</h3>
                 <p>Founder - CEO</p>
               </div>
-              <div className='col-lg-3 clr p-4'>
+            <div className='col-lg-3 team-card p-4'>
                 <img className='w-25' src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/team6-free-img.png" alt="" />
                 <h3 className='pt-3'>Mike Ross</h3>
                 <p>Founder - CEO</p>
@@ -178,9 +172,8 @@ function Page() {
       <section className="parallax3 ">
 
         <div className="i3 space-y-3 col-lg-3">
-          <div className='line m1'></div>
-          <div className="display-5 fw-semibold">Follow
-          </div>
+          <div className='line3 mt-5'></div>
+          <div className="display-5 fw-semibold">Follow Us</div>
           <div className='row gap-4 justify-content-center pt-3 fs-5'>
             <span className='col-12 col-lg-auto col-md-3'><BsFacebook />
             </span>

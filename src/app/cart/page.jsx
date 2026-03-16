@@ -31,7 +31,7 @@ function Cart() {
                 
                 {category.slice(0, 5).map((a) => (
                   <li className="nav-item ">
-                    <Link className="nav-link text-white d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
+                    <Link className="nav-link text-black d-none d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                   </li>
                 ))}
 
@@ -41,8 +41,8 @@ function Cart() {
               <Link className='text-decoration-none text-black ' href="/">Home</Link>
               <Link className='text-decoration-none text-black' href="/about">About</Link>
               <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
-              <li className='text-white'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
-              <li className='text-white'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
+              <li className='text-black'><Link className='text-decoration-none text-white' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
+              <li className='text-black'><Link className='text-decoration-none text-white' href="/user"><FaUserLarge /></Link> </li>
             </ul>
           </div>
         </nav>

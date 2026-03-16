@@ -29,7 +29,9 @@ function page() {
 
   return (
     <>
-<motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb"
+
+ <motion.nav className="navbar navbar-expand-lg navbar-dark p-3 nb glass-nav"
+        style={{ position: 'fixed',top: 0,left: 0,width: '100%',zIndex: 1000}}
           animate={{
             y: hidden ? -140 : 0,
             opacity: hidden ? 0 : 1,
@@ -87,9 +89,7 @@ function page() {
             </div>
           </div>
         </motion.nav>
-
       <section className="parallax1">
-        
         <div className="i space-y-3">
           <h1 className="display-5 fw-semibold">Raining Offers For
             <br /> Hot Summer!
@@ -104,6 +104,8 @@ function page() {
         </div>
 
       </section>
+    
+
       <section className="container py-5">
         <div className="row text-center justify-content-center ">
 
@@ -163,7 +165,7 @@ function page() {
             {data.map((a) => (
               <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
 
-                <div className="card p-3 h-100 border-0 shadow ">
+                <div className="card product-card h-100 border-0 shadow-sm">
                   <Link href={`/details/${a.id}`} className="text-decoration-none text-dark">
                     <img className="card-img border-0 w-75 h-100 mx-auto d-block card" src={a.thumbnail} alt='' />
                   </Link>
