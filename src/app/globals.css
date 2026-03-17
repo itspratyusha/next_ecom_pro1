@@ -72,9 +72,16 @@ body, p{
 }
 
 .nav-link:hover{
-  color:#120d78 !important;
-text-shadow: 0 0 8px rgba(0, 0, 0, 0.942);
+  color:#ffffff !important;
+font-weight: bolder;
+transform: scale(1.05);
 }
+.category-page .nav-link:hover{
+  color:#003366 !important;
+  
+}
+
+
 /* product card animation  */
 .product-card{
   transition: all 0.3s ease;
@@ -187,16 +194,15 @@ text-decoration: none;
 .parallax1 {
     position: relative;
   height: 850px;
-  background-image: linear-gradient(rgba(42, 140, 193, 0.322), rgba(12, 77, 156, 0.327)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg");
+  background-image: linear-gradient(rgba(0, 3, 4, 0.608), rgba(12, 77, 156, 0.327)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/home-new-bg-free-img.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;       
  
 }
-
 .parallax {
   height: 70vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.648)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.845)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-03.jpg");
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -205,20 +211,13 @@ text-decoration: none;
   background-repeat: no-repeat;
   background-size: cover;   
 }
-.parallax::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0, 0, 0, 0.473);
-
-}
 .nb{
   position: fixed;
   top:0;
   width:100%;
   z-index:1000;
   backdrop-filter: blur(10px);
-  background: #14405cd0;
+  background: linear-gradient(#133e59, #133e5963);
 }
 
 
@@ -238,26 +237,19 @@ text-decoration: none;
 .parallax2{
 position: relative;
   height: 70vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.574), rgba(0, 0, 0, 0.648)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/05/banner-04.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.495), rgb(0, 0, 0)), url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/05/banner-04.jpg");
   background-attachment: fixed;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
 }
-.parallax2::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0, 0, 0, 0.458);
-}
-
 .nb2{
   position: fixed;
   top:0;
   width:100%;
   z-index:1000;
   backdrop-filter: blur(10px);
-  background: #00101dac;
+  background: #002136ad;
 }
 .i2{
   position: absolute;
@@ -353,26 +345,21 @@ background-image:linear-gradient(rgba(0, 0, 0, 0.322), rgba(0, 0, 0, 0.648)), ur
 
 .parallax4{
  height: 70vh;
-background-image: linear-gradient(rgba(13, 59, 102, 0.166), rgba(11, 83, 151, 0.6)), 
+background-image: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.456)), 
 url("https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2019/12/banner-06.jpg");
    background-attachment: fixed;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
 }
-.parallax4::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0, 0, 0, 0.503);
-}
+
 .nb3{
   position: fixed;
   top:0;
   width:100%;
   z-index:1000;
   backdrop-filter: blur(10px);
-  background: #4a617aa8;
+  background: rgba(0, 0, 0, 0.467);
 }
 .ii{
   position: absolute;

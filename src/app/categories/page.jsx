@@ -18,7 +18,7 @@ function page() {
   return (
     <>
     <section>
-     <nav className="navbar navbar-expand-lg navbar-light p-4  ">
+     <nav className="navbar navbar-expand-lg navbar-dark p-4 category-page ">
           <div className="container-fluid ">
             <Link href="/">
             <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo@2x-free-img.png" alt='' />
@@ -29,7 +29,7 @@ function page() {
             <div className="collapse navbar-collapse" id="navbarNav">
                <ul className="navbar-nav gap-3 text-uppercase">
                    <li className="nav-item text-white">
-          <Link className="nav-link active fw-bold" aria-current="page" href="categories">EVERYTHING</Link>
+          <Link className="nav-link active fw-bold text-black" aria-current="page" href="categories">EVERYTHING</Link>
         </li>
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item " key={a.slug}>
@@ -39,12 +39,30 @@ function page() {
               
               </ul>
             </div>
-            <ul className="d-flex gap-4 text-white">
-              <Link className='text-decoration-none text-black ' href="/">Home</Link>
-              <Link className='text-decoration-none text-black' href="/about">About</Link>
-              <Link className='text-decoration-none text-black' href="/contact">Contact</Link>
-                   <li><Link className='text-decoration-none text-black' href="/cart"><FaShoppingCart /> {state.cart.length} </Link></li>
-              <li><Link className='text-decoration-none text-black' href="/user"><FaUserLarge /></Link> </li>
+            <ul className="d-flex gap-4 text-black">
+              <li className="nav-item">
+                  <Link className="nav-link text-black" href="/">Home</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black" href="/about">About</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black" href="/contact">Contact</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black nav-icon" href="/cart">
+                    <FaShoppingCart /> {state.cart.length}
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black nav-icon" href="/user">
+                    <FaUserLarge />
+                  </Link>
+                </li>
             </ul>
           </div>
      </nav>
