@@ -24,6 +24,7 @@ function page() {
         useEffect((a)=>{
          fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
          fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
+          import("bootstrap/dist/js/bootstrap.bundle.min.js");
         },[])
     return (
         <>
@@ -39,17 +40,24 @@ function page() {
             <Link href="/" className="d-flex align-items-center">
               <img className="navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo1@2x-free-img.png" alt="" />
             </Link>
-
+    <button 
+      className="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
             <div className="collapse navbar-collapse" id="navbarNav">
 
 
-              <ul className="navbar-nav gap-3 text-uppercase align-items-center ms-4">
+              <ul className="navbar-nav gap-3 text-uppercase align-items-center ms-4 ">
                 <li className="nav-item">
-                  <Link className="nav-link fw-bold" href="/categories">EVERYTHING</Link>
+                  <Link className="nav-link fw-bold mb-3 mb-lg-0 mg-md-0" href="/categories">EVERYTHING</Link>
                 </li>
 
                 {category.slice(0, 5).map((a) => (
-                  <li key={a.slug} className="nav-item">
+                  <li key={a.slug} className="nav-item d-none d-lg-flex">
                     <Link className="nav-link text-white" href={`/categories/${a.slug}`}>
                       {a.name}
                     </Link>

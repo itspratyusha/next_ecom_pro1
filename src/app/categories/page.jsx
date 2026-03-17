@@ -13,34 +13,66 @@ function page() {
         
          fetch("https://dummyjson.com/products").then(a => a.json()).then(b => setData(b.products))
          fetch("https://dummyjson.com/products/categories").then(a => a.json()).then(b => setCategory(b))
+          import("bootstrap/dist/js/bootstrap.bundle.min.js");
           
       }, [])
   return (
     <>
     <section>
-     <nav className="navbar navbar-expand-lg navbar-dark p-4 category-page ">
+     <nav className="navbar navbar-expand-lg navbar-light p-4 category-page bg-white ">
           <div className="container-fluid ">
             <Link href="/">
             <img className=" navv" src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2018/12/logo@2x-free-img.png" alt='' />
-            </Link>           
-             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
-            </button>
+            </Link> 
+            <ul className="navbar-nav mx-auto d-flex d-lg-none flex-row gap-3 text-center ">
+              <li className="nav-item">
+                  <Link className="nav-link text-black" href="/">Home</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black" href="/about">About</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black" href="/contact">Contact</Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link text-black nav-icon" href="/cart">
+                    <FaShoppingCart /> {state.cart.length}
+                  </Link>
+                </li>
+
+                <li className="nav-item d-none">
+                  <Link className="nav-link text-black nav-icon" href="/user">
+                    <FaUserLarge />
+                  </Link>
+                </li>
+            </ul>          
+            <button 
+      className="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
             <div className="collapse navbar-collapse" id="navbarNav">
-               <ul className="navbar-nav gap-3 text-uppercase">
-                   <li className="nav-item text-white">
-          <Link className="nav-link active fw-bold text-black" aria-current="page" href="categories">EVERYTHING</Link>
-        </li>
+              <ul className="navbar-nav gap-3 text-uppercase align-items-center mx-4">
+                <li className="nav-item">
+                  <Link className="nav-link fw-bold" href="/categories">EVERYTHING</Link>
+                </li>
+                
                   {category.slice(0, 5).map((a) => (
                     <li className="nav-item " key={a.slug}>
-                      <Link className="nav-link text-black d-none d-md-block d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
+                      <Link className="nav-link text-black d-md-block d-lg-block" href={`/categories/${a.slug}`}>{a.name}</Link>
                     </li>
                   ))}
               
               </ul>
-            </div>
-            <ul className="d-flex gap-4 text-black">
-              <li className="nav-item">
+          
+              <ul className="navbar-nav ms-auto align-items-center gap-4 nav-right">
+                <li className="nav-item">
                   <Link className="nav-link text-black" href="/">Home</Link>
                 </li>
 
@@ -63,7 +95,8 @@ function page() {
                     <FaUserLarge />
                   </Link>
                 </li>
-            </ul>
+              </ul>
+              </div>
           </div>
      </nav>
      </section>
